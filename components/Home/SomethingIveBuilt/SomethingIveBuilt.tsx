@@ -4,11 +4,12 @@ import ArrowIcon from "../../Icons/ArrowIcon"; // Your custom ArrowIcon (not use
 import Img from "../../smallComp/image/Img";
 import GithubIcon from "../../Icons/GithubIconForSomethingIveBuild";
 import ExternalLink from "../../Icons/ExternalLink";
+import { ExternalLinkIcon } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "Personal Portfolio Website",
+    title: "My Portfolio Website",
     tagline: "Interactive showcase powered by modern web technologies.",
     url: "https://neverlands-psycho.fun",
     github: 'https://github.com/rawatanuj07/Koders.git',
@@ -20,6 +21,7 @@ const projects = [
       "React.js",
       "Node.js",
       "MongoDB",
+      "TypeScript",
       "Framer Motion",
       "Twilio",
       "Portfolio",
@@ -39,6 +41,7 @@ const projects = [
     description: `TokenPrice Oracle is a robust full-stack platform designed to provide historical token prices with advanced interpolation for missing timestamps. The system is built with Next.js frontend and Node.js backend, and it leverages Redis caching alongside BullMQ job scheduling for high-performance, low-latency queries. By integrating with Alchemy SDK and using Zustand for state management, it efficiently manages large datasets for Ethereum and Polygon tokens, supporting precise price retrieval essential for DeFi applications and trading analytics.`,
     tags: [
       "Full Stack",
+      "Web3",
       "Next.js",
       "BlockChain",
       "Node.js",
@@ -63,11 +66,12 @@ const projects = [
     description: `EventEase is a comprehensive event booking system tailored for users and admins, offering dynamic event browsing with filters, seat booking limited to two per user, and cancellation features before events start. Admins can create and manage events, monitor attendees, and set event capacities with real-time status updates. Developed with React (Zustand), Node.js/Express, and MongoDB, it incorporates secure JWT authentication and role-based access control, while custom middleware logs booking activities. Styled with Tailwind CSS, it presents a scalable, responsive solution for modern event management.`,
     tags: [
       "Full Stack",
-      "Next.Js-15 ",
+      "Next.js'15 ",
       "React",
       "Zustand",
       "Node.js",
-
+"TypeScript",
+"Framer",
       "MongoDB",
       "JWT Authentication",
       "Role-Based Access",
@@ -105,11 +109,14 @@ const projects = [
     img: "/typing.png",
     description: `SilkRoute is a cloud-hosted ecommerce platform that integrates WooCommerce atop AWS EC2 and Ubuntu infrastructure to provide advanced product catalog management, order processing, and payment workflows. The platform supports seamless frontend integration, enabling customization of store layout and design. Administrators benefit from WooCommerce&apos;s extensive plugin ecosystem for SEO, marketing, and analytics. Focused on performance and security, SilkRoute ensures reliable uptime and smooth customer experience while providing a scalable and extensible foundation for enterprise-grade online retail.`,
     tags: [
-      "Next.JS",
+      "Next.jS",
+      "Full Stack",
       "Ecommerce",
       "WooCommerce",
       "AWS EC2",
       "Ubuntu",
+      "React.js",
+      "TypeScript",
       "Product Management",
       "Cloud Hosting",
       "Scalable Architecture",
@@ -124,12 +131,12 @@ const projects = [
     img: "ecommerce.png",
     video: "tosend.webm",
     description: `QuickCart delivers a seamless ecommerce experience through an intuitive real-time visual editor that enables rapid store creation without coding. Integrated with Sanity CMS for no-code content management and Razorpay for secure payments, it allows merchants to effortlessly customize layouts, branding, and product filters by categories and prices. Built using Next.js and Tailwind CSS, QuickCart combines performance and responsive design to cater to startups and growing businesses seeking a versatile and scalable online storefront.`,
-    tags: ["Ecommerce", "Full Stack", "Next.js-15", "Visual Editing", "Sanity CMS", "Razorpay", "TypeScript", "Framer", "Tailwind CSS"],
+    tags: ["Ecommerce", "Full Stack", "Next.js'15", "Visual Live Editing", "Sanity CMS", "Razorpay", "No Code", "React.js", "TypeScript", "Framer", "Tailwind CSS"],
   },
 
   {
     id: 7,
-    title: "Pathology Lab POS System",
+    title: "POS for Pathology Lab",
     tagline: "Specialized POS solution for pathology labs.",
     url: "https://nextjs-billing-invoice-software.vercel.app",
     github: "https://github.com/rawatanuj07/Nextjs_Hospital_Management_System.git",
@@ -239,28 +246,30 @@ export default function SomethingIveBuilt() {
                   {tagline}
                 </p>
               </a>
-              <div className="flex space-x-6 px-4 my-1">
-                {github && (
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${title} GitHub`}
-                    className="text-AAsecondary hover:text-white transition"
-                  >
-                    <GithubIcon link={github} />
-                  </a>
-                )}
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${title} Live Site`}
-                  className="text-AAsecondary hover:text-white transition"
-                >
-                  <ExternalLink url={url} router={router} />
-                </a>
-              </div>
+              <div className="flex justify-center space-x-6 px-4 my-1">
+  {github && (
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${title} GitHub`}
+      className="text-AAsecondary hover:text-white transition flex items-center space-x-1"
+    >
+     <span className="text-lg">GitHub:{" "} </span><GithubIcon link={github} />
+    </a>
+  )}
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${title} Live Site`}
+    className="text-AAsecondary hover:text-white text-lg transition flex items-center space-x-1"
+  >
+    <span>Live-Preview</span>
+    <ExternalLinkIcon className="w-6 h-6" />
+  </a>
+</div>
+
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] animate-shimmer pointer-events-none z-10" />
 
               <div
@@ -323,8 +332,8 @@ export default function SomethingIveBuilt() {
   className="absolute z-50 left-0 right-0 bottom-0 bg-AAprimary/90 backdrop-blur-md text-gray-300 rounded-b-3xl flex flex-col space-y-3
   transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-6 pt-6 pb-6
   max-h-64 overflow-y-auto"
->
-  <p className="text-sm leading-relaxed">{description}</p>
+> 
+  <p className="text-sm text-center leading-relaxed">{description}</p>
   <ul className="flex flex-wrap justify-center space-x-3 text-xs text-gray-400">
     {tags.map((tag) => (
       <li
