@@ -113,7 +113,7 @@ const AboutMe = forwardRef<HTMLDivElement, AboutMeProps>((props, ref) => {
               ))}
             </div>
             <div className="font-Header text-gray-300 pt-4 text-justify">
-            Pixels, packets, or protocols — I like making them play nicely together, whether that means scaling a web3 platform, orchestrating massive data pipelines, or fine-tuning the last millisecond out of a web app. For me, it&apos;s about turning complexity into something seamless, where every layer matters, and the magic happens when they all move as one.
+            Pixels, packets, or protocols —I like making them play nicely together, whether that means scaling a web3 platform, orchestrating massive data pipelines, or fine-tuning the last millisecond out of a web app. For me, it&apos;s about turning complexity into something seamless, where every layer matters, and the magic happens when they all move as one.
             </div>
           </div>
 
