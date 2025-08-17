@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+@layer utilities {
+  body::-webkit-scrollbar {
+    width: 0.4em;
+    background-color: #0b192f;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #4c5474;
+    scrollbar-gutter: stable;
+    border-radius: 40px;
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Holographic effects */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+/* Advanced blur effects */
+.backdrop-blur-3xl {
+  backdrop-filter: blur(64px);
+}
+/* Required for 3D flip effect */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Front and back side: hide backface */
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  border-radius: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back side rotated 180 degrees vertically (around X axis) */
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}
