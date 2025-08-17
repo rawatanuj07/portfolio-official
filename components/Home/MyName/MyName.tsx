@@ -52,7 +52,7 @@ const SplitWords = ({
   };
 
   return (
-    <h3 className="text-gray-300 font-semibold text-sm text-center md:text-xl sm:text-md mt-2 sm:mt-10 tracking-wider leading-relaxed">
+    <h3 className="text-gray-300 font-semibold sm:font-md text-sm text-center md:text-xl sm:text-md mt-2 sm:mt-10 tracking-wider leading-relaxed">
       {processNode(children, 0)}
     </h3>
   );
