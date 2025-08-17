@@ -320,24 +320,23 @@ export default function SomethingIveBuilt() {
                 </a>
 
                 <div
-                  className="absolute z-50 left-0 right-0 bottom-0 bg-AAprimary/90 backdrop-blur-md text-gray-300 rounded-b-3xl flex flex-col space-y-3 overflow-hidden
-                  transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-6 pt-6 pb-6"
-                  style={{ maxHeight: "calc(100% - 120px)" }}
-                >
-                  <p className="text-sm  leading-relaxed">{description}</p>
-                  <ul className="flex flex-wrap justify-center space-x-3 text-xs text-gray-400">
-                    {tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className="border border-gray-600 rounded m-1 px-2 py-1 select-text"
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
+  className="absolute z-50 left-0 right-0 bottom-0 bg-AAprimary/90 backdrop-blur-md text-gray-300 rounded-b-3xl flex flex-col space-y-3
+  transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-6 pt-6 pb-6
+  max-h-64 overflow-y-auto"
+>
+  <p className="text-sm leading-relaxed">{description}</p>
+  <ul className="flex flex-wrap justify-center space-x-3 text-xs text-gray-400">
+    {tags.map((tag) => (
+      <li
+        key={tag}
+        className="border border-gray-600 rounded m-1 px-2 py-1 select-text"
+      >
+        {tag}
+      </li>
+    ))}
+  </ul>
+</div>
 
-
-                </div>
               </div>
             </div>
           )
