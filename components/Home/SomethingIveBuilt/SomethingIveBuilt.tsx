@@ -33,7 +33,7 @@ const projects = [
   {
     id: 2,
     title: "CryptoFlux",
-    tagline: "Historical token price retrieval for missing time stamps.",
+    tagline: "Interpolating Historical Token Prices for Missing Blockchain Timestamps.",
     url: "https://rawats-web3-token-price-tracker.vercel.app",
     github: 'https://github.com/rawatanuj07/Koders.git',
     video: "cryptotracker.webm",
