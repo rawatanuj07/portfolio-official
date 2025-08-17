@@ -9,7 +9,7 @@ import { ExternalLinkIcon } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "My Portfolio Website",
+    title: "Portfolio",
     tagline: "Interactive showcase powered by modern web technologies.",
     url: "https://neverlands-psycho.fun",
     github: 'https://github.com/rawatanuj07/Koders.git',
@@ -32,7 +32,7 @@ const projects = [
 
   {
     id: 2,
-    title: "TokenPrice Oracle (Web3)",
+    title: "CryptoFlux",
     tagline: "Historical token price retrieval for missing time stamps.",
     url: "https://rawats-web3-token-price-tracker.vercel.app",
     github: 'https://github.com/rawatanuj07/Koders.git',
@@ -236,7 +236,14 @@ export default function SomethingIveBuilt() {
                 outline: "4px solid white",
                 outlineOffset: "6px",
               }}
-            ><a href={url}>
+            > 
+              {(id === 1 || id === 2) && (
+  <div className="absolute top-0 right-0 rounded-bl-lg bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-bold px-3 py-1 shadow-md">
+    {id === 1 ? "🌟 Featured" : "🌟 LATEST!"}
+  </div>
+)}
+
+          <a href={url}>
                 {/* <h3 className="bg-gradient-to-r from-teal-400 via-indigo-500 to-pink-600 bg-clip-text text-transparent font-bold text-3xl text-center p-4 "> */}
                 <h3 className="text-palet underline underline-offset-4 decoration-palet font-bold text-2xl text-center p-2 ">
 
