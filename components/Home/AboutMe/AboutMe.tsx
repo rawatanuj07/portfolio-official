@@ -19,12 +19,12 @@ const AboutMe = forwardRef<HTMLDivElement, AboutMeProps>((props, ref) => {
       "Next.js-15/React",
       "TypeScript/JavaScript",
       "Tailwind/Framer",
-      "Redis",
+      "Aws-ec2/Lambda",
       "GitHub/Docker",
     ],
     [
-      "Node.js",
-      "Aws/Web3",
+      "Node.js/Redis",
+      "Web3/Blockchain",
       "RabbitMQ/BullMQ",
       "MongoDB/SQL Databases",
       "Python/Java/Selenium",
@@ -61,31 +61,7 @@ const AboutMe = forwardRef<HTMLDivElement, AboutMeProps>((props, ref) => {
         <div className="w-full flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 sm:space-x-2">
           {/* Text Content */}
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-md font-bold">
-            {/* <div className="font-Header text-gray-300 text-justify">
-              Hey there! I&apos;m Anuj, and I&apos;m pretty obsessed with
-              building cool stuff with code. My tech journey began about a year after my graduation when I initially encountered{" "}
-              <span className="text-AAsecondary">Java</span>, and was
-              instantly hooked. That curiosity led me down a rabbit hole of
-              programming that I&apos;m still happily stuck in today.
-            </div>
-            <div className="font-Header text-gray-300 text-justify">
-              After years of teaching myself and eventually getting the{" "}
-              <span className="text-AAsecondary">expertise</span>, I&apos;ve
-              spent <span className="text-AAsecondary">+3 years</span> honing my
-              skills professionally and have been lucky enough to work with some
-              really interesting companies and startups. Over the last few years,
-              I&apos;ve architected and delivered high-performance, scalable applications across a variety of industries.
-            </div>
-            
-            <div className="font-Header text-gray-300 text-justify">
-              I&apos;m passionate about tackling new technical challenges and
-              rapidly picking up emerging tools and frameworks—especially in the
-              domains of {" "}
-              <span className="text-AAsecondary">Web3, Development</span>,
-              and <span className="text-AAsecondary">Automation </span>. I thrive
-              on opportunities to design scalable systems that drive business
-              value and innovation.
-            </div> */}
+           
             <div className="font-Header tracking-wide text-gray-300 pt-2 pb-1 text-justify">
               Here&apos;s what I&apos;m usually working with these days:
             </div>
