@@ -5,6 +5,8 @@ const MobileMenu = (props) => {
     props.setRotate(!props.rotate);
     props.setShowElement(!props.ShowElement);
   };
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
   return (
     <>
       <motion.div
@@ -22,7 +24,7 @@ const MobileMenu = (props) => {
         justify-center items-center space-y-8 font-sans"
         >
           <Link
-            to="aboutSection"
+            to="SomethingIveBuiltSection"
             spy={true}
             smooth={true}
             offset={-50}
@@ -35,14 +37,14 @@ const MobileMenu = (props) => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              About
+              Work
             </span>
           </Link>
           <Link
-            to="SomethingIveBuiltSection"
+            to="aboutSection"
             spy={true}
             smooth={true}
-            offset={-250}
+            offset={-150}
             duration={200}
             onClick={() => closeMenu()}
             className="flex flex-col text-center space-y-2"
@@ -54,14 +56,14 @@ const MobileMenu = (props) => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              Work
+              About
             </span>
           </Link>
           <Link
             to="WhereIhaveWorkedSection"
             spy={true}
             smooth={true}
-            offset={100}
+            offset={isMobile ? -250 : 100}
             duration={200}
             onClick={() => closeMenu()}
             className="flex flex-col text-center space-y-2"
@@ -91,7 +93,7 @@ const MobileMenu = (props) => {
               Contact
             </span>
           </Link>
-          <a href={"/work"}target={"_blank"} rel="noreferrer">
+          <a href={"/rexume-x.pdf"}target={"_blank"} rel="noreferrer">
             <button
               className="rounded border font-Text2  border-AAsecondary
            hover:bg-ResumeButtonHover py-2 sm:py-4 px-5 sm:px-10 text-xs text-AAsecondary"

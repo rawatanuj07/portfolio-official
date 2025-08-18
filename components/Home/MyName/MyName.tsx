@@ -175,7 +175,7 @@ const MyName: React.FC<MyNameProps> = (props) => {
       </SplitWords>
 
       <motion.a
-        href="#SomethingIveBuiltSection"
+        href={"/rexume-x.pdf"} 
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{

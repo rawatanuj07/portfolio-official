@@ -121,7 +121,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
           </span>
         </ReactScrollLink>
       </motion.span>
-      <a  target={"_blank"} rel="noreferrer">
+      <a href={"/rexume-x.pdf"}  target={"_blank"} rel="noreferrer">
         <motion.button
         href="#SomethingIveBuiltSection"
           initial={{
