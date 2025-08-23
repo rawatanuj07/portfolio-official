@@ -70,8 +70,8 @@ const projects = [
       "React",
       "Zustand",
       "Node.js",
-"TypeScript",
-"Framer",
+      "TypeScript",
+      "Framer",
       "MongoDB",
       "JWT Authentication",
       "Role-Based Access",
@@ -236,14 +236,14 @@ export default function SomethingIveBuilt() {
                 outline: "4px solid white",
                 outlineOffset: "6px",
               }}
-            > 
+            >
               {(id === 1 || id === 2) && (
-  <div className="absolute top-0 right-0 rounded-bl-lg bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-bold px-3 py-1 shadow-md">
-    {id === 1 ? "🌟 Featured" : "🌟 LATEST!"}
-  </div>
-)}
+                <div className="absolute top-0 right-0 rounded-bl-lg bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-bold px-3 py-1 shadow-md">
+                  {id === 1 ? "🌟 Featured" : "🌟 LATEST!"}
+                </div>
+              )}
 
-          <a href={url}>
+              <a href={url}>
                 {/* <h3 className="bg-gradient-to-r from-teal-400 via-indigo-500 to-pink-600 bg-clip-text text-transparent font-bold text-3xl text-center p-4 "> */}
                 <h3 className="text-palet underline underline-offset-4 decoration-palet font-bold text-2xl text-center p-2 ">
 
@@ -254,28 +254,29 @@ export default function SomethingIveBuilt() {
                 </p>
               </a>
               <div className="flex justify-center space-x-6 px-4 my-1">
-  {github && (
-    <a
-      href={github}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`${title} GitHub`}
-      className="text-AAsecondary hover:text-white transition flex items-center space-x-1"
-    >
-     <span className="text-lg">GitHub:{" "} </span><GithubIcon link={github} />
-    </a>
-  )}
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label={`${title} Live Site`}
-    className="text-AAsecondary hover:text-white text-lg transition flex items-center space-x-1"
-  >
-    <span>Live-Preview</span>
-    <ExternalLinkIcon className="w-6 h-6" />
-  </a>
-</div>
+                
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${title} Live Site`}
+                  className="text-AAsecondary hover:text-white text-lg transition flex items-center space-x-1"
+                >
+                  <span>Live-Demo Link</span>
+                  <ExternalLinkIcon className="w-6 h-6" />
+                </a>
+                {github && (
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${title} GitHub`}
+                    className="text-AAsecondary hover:text-white transition flex items-center space-x-1"
+                  >
+                    <span className="text-lg">GitHub:{" "} </span><GithubIcon link={github} />
+                  </a>
+                )}
+              </div>
 
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] animate-shimmer pointer-events-none z-10" />
 
@@ -336,22 +337,22 @@ export default function SomethingIveBuilt() {
                 </a>
 
                 <div
-  className="absolute z-50 left-0 right-0 bottom-0 bg-AAprimary/90 backdrop-blur-md text-gray-300 rounded-b-3xl flex flex-col space-y-3
+                  className="absolute z-50 left-0 right-0 bottom-0 bg-AAprimary/90 backdrop-blur-md text-gray-300 rounded-b-3xl flex flex-col space-y-3
   transform translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-6 pt-6 pb-6
   max-h-64 overflow-y-auto"
-> 
-  <p className="text-sm text-center leading-relaxed">{description}</p>
-  <ul className="flex flex-wrap justify-center space-x-3 text-xs text-gray-400">
-    {tags.map((tag) => (
-      <li
-        key={tag}
-        className="border border-gray-600 rounded m-1 px-2 py-1 select-text"
-      >
-        {tag}
-      </li>
-    ))}
-  </ul>
-</div>
+                >
+                  <p className="text-sm text-center leading-relaxed">{description}</p>
+                  <ul className="flex flex-wrap justify-center space-x-3 text-xs text-gray-400">
+                    {tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="border border-gray-600 rounded m-1 px-2 py-1 select-text"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
               </div>
             </div>
